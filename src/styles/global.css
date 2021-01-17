@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+:root {
+  --color-txt: #33302C;
+  --color-brown: #5A4D49;
+  --color-green: #B3BFA7;
+  --color-yellow: #BF954D;
+  --color-beige: #D1C9BC;
+}
+
+::-moz-selection {background: var(--color-green); color: white;}
+::selection {background: var(--color-green); color: white;}
+
+*, ::after, ::before {box-sizing: border-box;}
+
+body {font-family: 'Source Sans Pro', sans-serif; color: var(--color-txt); line-height: 1.5; font-size: 1rem;}
+
+h1 {margin: 0 0 1.5em; line-height: 1.2; font-weight: 600; text-transform: uppercase; letter-spacing: .1em;}
+h2 {margin-top: 0; line-height: 1.2; font-weight: 600; text-transform: uppercase; letter-spacing: .1em;}
+h3 {margin-top: 0; line-height: 1.2; font-weight: 600;}
+h4 {margin-top: 0; line-height: 1.2; font-weight: 600;}
+h5 {margin-top: 0; line-height: 1.2; font-weight: 600;}
+h6 {margin-top: 0; line-height: 1.2; font-weight: 600;}
+
+p {margin: 0 0 2em;}
+ul, ol {margin: 0 0 2em;}
+figure {padding: 1em; border: 1px solid var(--color-green); margin: 0 0 2em; width: 100%;}
+img {max-width: 100%;}
+figcaption {margin-top: 1em; text-align: center; font-size: .8rem;}
+
+a {color: var(--color-yellow); font-weight: bold;}
+  a:hover {text-decoration: none;}
+  a.read-all {text-transform: uppercase;}
+
+.container {width: 1170px; margin: 0 auto; position: relative;}
+
+.site-header {padding: 4rem 0; background: url('../images/layout/shabby.jpg'); background-size: cover; position: relative;}
+  .site-header::before {content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, .8);}
+  .site-logo img {height: 5rem;}
+  .site-desc {font-family: 'Satisfy', cursive; margin: 2rem 0 0 7.5rem; font-size: 2rem; color: var(--color-brown);}
+
+.page {padding: 4rem 0; background: url('../images/layout/border.svg') top repeat-x, url('../images/layout/border.svg') bottom repeat-x;}
+  .page .container {display: grid; grid-template-columns: 2fr 1fr; grid-gap: 3em;}
+  .page .home-h1 {display: none;}
+
+.preview {padding: 1.5em; border: 1px solid var(--color-beige); margin-top: 2em; display: grid; grid-template-columns: 1fr 2fr; grid-template-areas: 'img txt'; grid-gap: 1.5em;}
+  .preview:first-child {margin: 0;}
+  .preview:nth-child(even) {grid-template-columns: 2fr 1fr; grid-template-areas: 'txt img';}
+  .preview-img {grid-area: img;}
+  .preview-txt {grid-area: txt;}
+
+.teaser-img {margin-bottom: 2em;}
+
+.pagination {margin-top: 2em; text-align: right;}
+  .pagination a {margin-left: .5em;}
+
+aside {background: url('../images/layout/brush.svg') top center no-repeat; padding-bottom: 8rem; margin-top: -8rem;}
+
+.profile {padding: 2em; border: 1px solid var(--color-green); background: white; color: var(--color-brown); text-align: center;}
+  .profile-img {padding: 5px; border: 1px solid var(--color-green); margin-bottom: 1em;}
+
+.widget {padding: 1em; border-right: 5px solid var(--color-green); margin-top: 2em; text-align: right; min-height: 3em;}
+  .widget.contact a {font-size: 1.5rem;}
+  .widget.social a {margin-left: .5em;}
+
+.site-footer {font-size: .8rem; padding: 1.5rem 0; text-align: right;}
+  .site-footer a {color: var(--color-txt); font-weight: normal;}
+
+
+@media (max-width: 1200px) {
+
+  .container {width: 960px;}
+  .site-desc {margin-left: 0;}
+
+}
+
+@media (max-width: 992px) {
+
+  .container {width: 720px;}
+  .site-header {padding: 2rem 0;}
+    .site-logo img {height: 4rem;}
+    .site-desc {margin-top: .5rem; font-size: 1.5rem;}
+  .page {padding: 3rem 0;}
+  .preview {display: block;}
+    .preview-img {margin-bottom: 1em;}
+  .profile {padding: 1.5em;}
+
+}
+
+@media (max-width: 768px) {
+
+  .container {width: 540px;}
+  .page .container {display: block;}
+  aside {padding-bottom: 2rem; margin-top: 2rem;}
+
+}
+
+@media (max-width: 576px) {
+
+  body {font-size: .9rem;}
+  .container {width: 100%; padding: 0 15px;}
+  .site-footer {padding: 1rem 0;}
+
+}
