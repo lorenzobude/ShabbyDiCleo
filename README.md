@@ -1,2 +1,3 @@
 # ShabbyDiCleo
- Gatsby demo blog
+
+shabbydicleo.netlify.app
